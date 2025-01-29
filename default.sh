@@ -70,7 +70,7 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
-    "https://huggingface.co/pizzaboy29/ComfyUI/blob/main/LTXV3BDreamDiffuseUNET.safetensors"    
+    "https://huggingface.co/pizzaboy29/models/blob/main/LTXV3BDreamDiffuseUNET.safetensors"    
 )
 
 UNET_MODELS=(
@@ -78,7 +78,7 @@ UNET_MODELS=(
 )
 
 CLIP_MODELS=(
-    "https://huggingface.co/pizzaboy29/ComfyUI/blob/main/t5-v1_1-xxl-encoder-Q3_K_S.gguf"   
+    "https://huggingface.co/pizzaboy29/models/blob/main/t5-v1_1-xxl-encoder-Q3_K_S.gguf"   
 )
 
 LORA_MODELS=(
@@ -89,13 +89,15 @@ VAE_MODELS=(
     #"https://huggingface.co/stabilityai/sd-vae-ft-ema-original/resolve/main/vae-ft-ema-560000-ema-pruned.safetensors"
     #"https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
     #"https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
-    "https://huggingface.co/pizzaboy29/ComfyUI/blob/main/ltx-video-v0.9-vae_finetune_all.safetensors"
+    "https://huggingface.co/pizzaboy29/models/blob/main/ltx-video-v0.9-vae_finetune_all.safetensors"
 )
 
 ESRGAN_MODELS=(
     "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
     "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
     "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
+    "https://huggingface.co/pizzaboy29/models/blob/main/FAST4xLSDIRCompactC3.pth"
+    "https://huggingface.co/pizzaboy29/models/blob/main/FASTLESS4xNomosWebPhoto_RealPLKSR.pth"
 )
 
 CONTROLNET_MODELS=(
