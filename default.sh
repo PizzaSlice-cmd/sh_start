@@ -62,6 +62,7 @@ NODES=(
     "https://github.com/IamCreateAI/Ruyi-Models"
     "https://github.com/calcuis/gguf"
     "https://github.com/audioscavenger/ComfyUI-Thumbnails"
+    "https://github.com/tzwm/comfyui-profiler"
 )
 
 CHECKPOINT_MODELS=(
