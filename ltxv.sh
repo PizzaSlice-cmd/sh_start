@@ -78,7 +78,7 @@ UNET_MODELS=(
 
 CLIP_MODELS=(
     "https://huggingface.co/pizzaboy29/models/resolve/main/t5-v1_1-xxl-encoder-Q3_K_S.gguf"
-    "https://huggingface.co/calcuis/gguf-node/resolve/main/t5xxl_fp8_e4m3fn.safetensors"   
+    "https://huggingface.co/city96/t5-v1_1-xxl-encoder-gguf/resolve/main/t5-v1_1-xxl-encoder-Q8_0.gguf"   
 )
 
 LORA_MODELS=(
