@@ -76,7 +76,7 @@ UNET_MODELS=(
 )
 
 CLIP_MODELS=(
-    #"https://huggingface.co/pizzaboy29/models/resolve/main/t5-v1_1-xxl-encoder-Q3_K_S.gguf"   
+    "https://huggingface.co/pizzaboy29/models/resolve/main/t5-v1_1-xxl-encoder-Q3_K_S.gguf"   
 )
 
 LORA_MODELS=(
