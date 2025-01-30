@@ -77,7 +77,8 @@ UNET_MODELS=(
 )
 
 CLIP_MODELS=(
-    "https://huggingface.co/pizzaboy29/models/resolve/main/t5-v1_1-xxl-encoder-Q3_K_S.gguf"   
+    "https://huggingface.co/pizzaboy29/models/resolve/main/t5-v1_1-xxl-encoder-Q3_K_S.gguf"
+    "https://huggingface.co/calcuis/gguf-node/resolve/main/t5xxl_fp8_e4m3fn.safetensors"   
 )
 
 LORA_MODELS=(
@@ -89,6 +90,7 @@ VAE_MODELS=(
     #"https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
     #"https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/ltx-video-v0.9-vae_finetune_all.safetensors"
+    "https://huggingface.co/calcuis/ltxv-gguf/resolve/main/ltxv-0.9.1-vae.safetensors"
 )
 
 ESRGAN_MODELS=(
