@@ -75,6 +75,7 @@ CHECKPOINT_MODELS=(
 
 UNET_MODELS=(
     "https://huggingface.co/pizzaboy29/models/resolve/main/fast6stephunyuanvideoCFG9720p_fp8.safetensors"
+    "https://huggingface.co/tencent/HunyuanVideo/resolve/main/hunyuan-video-t2v-720p/transformers/mp_rank_00_model_states_fp8.pt"
 )
 
 DIFFUSION_MODELS=(
