@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pip install hf-transfer
+pip install hf_transfer
 
 # This file will be sourced in init.sh
 
