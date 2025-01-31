@@ -78,7 +78,7 @@ UNET_MODELS=(
 )
 
 DIFFUSION_MODELS=(
-    "https://huggingface.co/city96/FastHunyuan-gguf/resolve/main/fast-hunyuan-video-t2v-720p-Q4_1.gguf"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/fast6stephunyuanvideoCFG9720p_fp8.safetensors"
 )
 
 CLIP_MODELS=(
