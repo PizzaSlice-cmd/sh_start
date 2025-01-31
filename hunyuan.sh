@@ -191,6 +191,7 @@ function provisioning_get_pip_packages() {
     if [[ -n $PIP_PACKAGES ]]; then
             pip_install ${PIP_PACKAGES[@]}
     fi
+    pip_install hf_transfer  # Explicitly installing hf_transfer
 }
 
 function provisioning_get_nodes() {
