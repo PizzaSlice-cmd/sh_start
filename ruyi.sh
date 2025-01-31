@@ -286,4 +286,6 @@ function provisioning_download() {
     fi
 }
 
+micromamba run -n comfyui pip install hf-transfer
+
 provisioning_start
