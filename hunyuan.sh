@@ -74,11 +74,11 @@ CHECKPOINT_MODELS=(
 )
 
 UNET_MODELS=(
-    #"https://huggingface.co/city96/FastHunyuan-gguf/resolve/main/fast-hunyuan-video-t2v-720p-Q4_1.gguf"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/fast6stephunyuanvideoCFG9720p_fp8.safetensors"
 )
 
 DIFFUSION_MODELS=(
-    "https://huggingface.co/pizzaboy29/models/resolve/main/fast6stephunyuanvideoCFG9720p_fp8.safetensors"
+    #"https://huggingface.co/pizzaboy29/models/resolve/main/fast6stephunyuanvideoCFG9720p_fp8.safetensors"
 )
 
 CLIP_MODELS=(
@@ -97,7 +97,8 @@ VAE_MODELS=(
     #"https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
     #"https://huggingface.co/pizzaboy29/models/resolve/main/ltx-video-v0.9-vae_finetune_all.safetensors"
     #"https://huggingface.co/calcuis/ltxv-gguf/resolve/main/ltxv-0.9.1-vae.safetensors"
-    "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuan_video_vae_bf16.safetensors"
+    #"https://huggingface.co/pizzaboy29/models/resolve/main/hunyuan_video_vae_bf16.safetensors"
+    "https://huggingface.co/tencent/HunyuanVideo/resolve/main/hunyuan-video-t2v-720p/vae/pytorch_model.pt"
 )
 
 ESRGAN_MODELS=(
