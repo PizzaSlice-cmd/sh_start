@@ -1,5 +1,7 @@
 #!/bin/bash
 
+pip install hf-transfer
+
 # This file will be sourced in init.sh
 
 # https://raw.githubusercontent.com/ai-dock/comfyui/main/config/provisioning/default.sh
@@ -285,7 +287,5 @@ function provisioning_download() {
         wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
     fi
 }
-
-micromamba run -n comfyui pip install hf-transfer
 
 provisioning_start
