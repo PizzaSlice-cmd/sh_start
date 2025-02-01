@@ -74,8 +74,8 @@ CHECKPOINT_MODELS=(
 )
 
 UNET_MODELS=(
-    "https://huggingface.co/pizzaboy29/models/resolve/main/fast6stephunyuanvideoCFG9720p_fp8.safetensors"
-    "https://huggingface.co/tencent/HunyuanVideo/resolve/main/hunyuan-video-t2v-720p/transformers/mp_rank_00_model_states_fp8.pt"
+    "https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_FastVideo_720_fp8_e4m3fn.safetensors"
+    "https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_720_cfgdistill_fp8_e4m3fn.safetensors"
 )
 
 DIFFUSION_MODELS=(
@@ -90,6 +90,7 @@ CLIP_MODELS=(
 LORA_MODELS=(
     #"https://civitai.com/api/download/models/16576"
     "https://huggingface.co/leapfusion-image2vid-test/image2vid-960x544/resolve/main/img2vid544p.safetensors"
+    "https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hyvideo_FastVideo_LoRA-fp8.safetensors"
 )
 
 VAE_MODELS=(
@@ -98,7 +99,8 @@ VAE_MODELS=(
     #"https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
     #"https://huggingface.co/pizzaboy29/models/resolve/main/ltx-video-v0.9-vae_finetune_all.safetensors"
     #"https://huggingface.co/calcuis/ltxv-gguf/resolve/main/ltxv-0.9.1-vae.safetensors"
-    #"https://huggingface.co/pizzaboy29/models/resolve/main/hunyuan_video_vae_bf16.safetensors"
+    "https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_fp32.safetensors"
+    "https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_bf16.safetensors"
     "https://huggingface.co/tencent/HunyuanVideo/resolve/main/hunyuan-video-t2v-720p/vae/pytorch_model.pt"
 )
 
@@ -192,6 +194,7 @@ function provisioning_get_pip_packages() {
             pip_install ${PIP_PACKAGES[@]}
     fi
     pip_install hf_transfer  # Explicitly installing hf_transfer
+    pip install sageattention
 }
 
 function provisioning_get_nodes() {
