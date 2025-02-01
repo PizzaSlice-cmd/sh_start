@@ -23,6 +23,7 @@ NODES=(
     "https://github.com/cubiq/ComfyUI_essentials"
     "https://github.com/crystian/ComfyUI-Crystools"
     "https://github.com/WASasquatch/was-node-suite-comfyui"
+    "https://github.com/diontimmer/ComfyUI-Vextra-Nodes"
     "https://github.com/chengzeyi/Comfy-WaveSpeed"
     "https://github.com/ali-vilab/TeaCache"
     #"https://github.com/WASasquatch/WAS_Extras"
