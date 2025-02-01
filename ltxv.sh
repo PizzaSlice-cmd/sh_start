@@ -35,6 +35,7 @@ NODES=(
     "https://github.com/melMass/comfy_mtb"
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     "https://github.com/theUpsider/ComfyUI-Logic"
+    "https://codeberg.org/Gourieff/comfyui-reactor-node"
     #"https://github.com/M1kep/ComfyLiterals"
     #"https://github.com/Extraltodeus/ComfyUI-AutomaticCFG"
     #"https://github.com/Extraltodeus/Stable-Diffusion-temperature-settings"
