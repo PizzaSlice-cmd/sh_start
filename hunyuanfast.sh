@@ -9,13 +9,13 @@
 #DEFAULT_WORKFLOW="https://..."
 
 APT_PACKAGES=(
-    #"package-1"
-    #"package-2"
+    "aria2"
+    #"sageattention"
 )
 
 PIP_PACKAGES=(
-    #"package-1"
-    #"package-2"
+    "HF_Transfer"
+    "sageattention"
 )
 
 NODES=(
@@ -176,23 +176,6 @@ function provisioning_start() {
     provisioning_print_end
 }
 
-# Function to install aria2c if not present
-def install_aria2c():
-    if not shutil.which("aria2c"):
-        print("Installing aria2c...")
-        if sys.platform.startswith("linux"):
-            subprocess.run(["sudo", "apt", "update"], check=True)
-            subprocess.run(["sudo", "apt", "install", "-y", "aria2"], check=True)
-        elif sys.platform.startswith("darwin"):
-            subprocess.run(["brew", "install", "aria2"], check=True)
-        else:
-            print("Unsupported OS for automatic installation. Install aria2 manually.")
-            sys.exit(1)
-    else:
-        print("aria2c is already installed.")
-
-install_aria2c()
-
 function pip_install() {
     if [[ -z $MAMBA_BASE ]]; then
             "$COMFYUI_VENV_PIP" install --no-cache-dir "$@"
@@ -211,8 +194,6 @@ function provisioning_get_pip_packages() {
     if [[ -n $PIP_PACKAGES ]]; then
             pip_install ${PIP_PACKAGES[@]}
     fi
-    pip_install hf_transfer  # Explicitly installing hf_transfer
-    pip install sageattention
 }
 
 function provisioning_get_nodes() {
