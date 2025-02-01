@@ -72,7 +72,8 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
-    "https://huggingface.co/pizzaboy29/models/resolve/main/LTXV3BDreamDiffuseUNET.safetensors"    
+    #"https://huggingface.co/pizzaboy29/models/resolve/main/LTXV3BDreamDiffuseUNET.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/ltxDREAM-funetuned-3b-v2.safetensors"
 )
 
 UNET_MODELS=(
@@ -94,6 +95,7 @@ VAE_MODELS=(
     #"https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/ltx-video-v0.9-vae_finetune_all.safetensors"
     "https://huggingface.co/calcuis/ltxv-gguf/resolve/main/ltxv-0.9.1-vae.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/LTX-Video-VAE-BF16.safetensors"
 )
 
 ESRGAN_MODELS=(
