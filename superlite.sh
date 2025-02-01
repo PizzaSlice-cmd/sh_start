@@ -22,6 +22,8 @@ NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
     "https://github.com/cubiq/ComfyUI_essentials"
     "https://github.com/crystian/ComfyUI-Crystools"
+    "https://github.com/chengzeyi/Comfy-WaveSpeed"
+    "https://github.com/ali-vilab/TeaCache"
     #"https://github.com/WASasquatch/was-node-suite-comfyui"
     #"https://github.com/WASasquatch/WAS_Extras"
     #"https://github.com/lilly1987/ComfyUI_node_Lilly"
@@ -180,6 +182,7 @@ function provisioning_get_pip_packages() {
             pip_install ${PIP_PACKAGES[@]}
     fi
     pip_install hf_transfer  # Explicitly installing hf_transfer
+    pip install sageattention
 }
 
 function provisioning_get_nodes() {
