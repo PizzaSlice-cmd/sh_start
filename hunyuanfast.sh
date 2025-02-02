@@ -230,18 +230,22 @@ function provisioning_get_default_workflow() {
 }
 
 function provisioning_get_models() {
-    if [[ -z $2 ]]; then return 1; fi
-    
-    dir="$1"
-    mkdir -p "$dir"
+    local dir="$1"
     shift
-    arr=("$@")
-    printf "Downloading %s model(s) to %s...\n" "${#arr[@]}" "$dir"
-    for url in "${arr[@]}"; do
-        printf "Downloading: %s\n" "${url}"
-        provisioning_download "${url}" "${dir}"
-        printf "\n"
-    done
+    local urls=("$@")
+
+    if [[ ${#urls[@]} -eq 0 ]]; then
+        echo "No URLs provided for directory: $dir"
+        return
+    fi
+
+    # Use batch download if there are multiple URLs
+    if [[ ${#urls[@]} -gt 1 ]]; then
+        provisioning_batch_download "$dir" "${urls[@]}"
+    else
+        # Fallback to single-file download for compatibility
+        provisioning_download "${urls[0]}" "$dir"
+    fi
 }
 
 function provisioning_print_header() {
@@ -314,6 +318,20 @@ function provisioning_download() {
         echo "Downloading with aria2: $url"
         aria2c --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 --console-log-level=warn --summary-interval=3 "$url"
     fi
+}
+
+function provisioning_batch_download() {
+    local dir="$1"
+    shift
+    local urls=("$@")
+
+    if [[ ${#urls[@]} -eq 0 ]]; then
+        echo "No URLs provided for directory: $dir"
+        return
+    fi
+
+    echo "Batch downloading ${#urls[@]} files to $dir..."
+    aria2c --dir="$dir" --console-log-level=warn --summary-interval=3 --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 "${urls[@]}"
 }
 
 provisioning_start
