@@ -114,6 +114,13 @@ ESRGAN_MODELS=(
     "https://huggingface.co/pizzaboy29/models/resolve/main/FASTLESS4xNomosWebPhoto_RealPLKSR.pth"
 )
 
+WORKFLOW_MODELS=(
+    "https://huggingface.co/pizzaboy29/models/resolve/main/workflow%20vast%20hunyuan.json"
+    #"https://huggingface.co/pizzaboy29/models/resolve/main/workflow%20LTX%20BETTER%20V2%20wan%20VAST.json"
+    #"https://huggingface.co/pizzaboy29/models/resolve/main/workflow%20WAN%20Cog%20VAST.json"
+    #"https://huggingface.co/pizzaboy29/models/resolve/main/workflow%20Wan%20Ruyi%20runpod.json"
+)
+
 CONTROLNET_MODELS=(
     #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_mid.safetensors"
     #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors?download"
@@ -174,6 +181,9 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/workspace/ComfyUI/user/default/workflows" \
+        "${WORKFLOW_MODELS[@]}"
     provisioning_print_end
 }
 
