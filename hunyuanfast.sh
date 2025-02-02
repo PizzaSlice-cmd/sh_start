@@ -10,7 +10,7 @@
 
 APT_PACKAGES=(
     "aria2"
-    "ffmpeg"
+    "ffmpeg nvidia-cuda-toolkit"
 )
 
 PIP_PACKAGES=(
