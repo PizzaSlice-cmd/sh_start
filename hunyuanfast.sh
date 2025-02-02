@@ -10,7 +10,7 @@
 
 APT_PACKAGES=(
     "aria2"
-    #"blah"
+    "ffmpeg"
 )
 
 PIP_PACKAGES=(
