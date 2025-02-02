@@ -182,7 +182,7 @@ function provisioning_start() {
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/workspace/ComfyUI/user/default/workflows" \
+        "${WORKSPACE}/ComfyUI/user/default/workflows" \
         "${WORKFLOW_MODELS[@]}"
     provisioning_print_end
 }
