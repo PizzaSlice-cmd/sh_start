@@ -289,16 +289,30 @@ function provisioning_has_valid_civitai_token() {
 
 # Download from $1 URL to $2 file path
 function provisioning_download() {
-    if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
-        auth_token="$HF_TOKEN"
-    elif 
-        [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
-        auth_token="$CIVITAI_TOKEN"
-    fi
-    if [[ -n $auth_token ]];then
-        wget --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+    local url="$1"
+    local dir="$2"
+    local filename=$(basename "$url")
+
+    if [[ $url =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
+        # Use huggingface-cli for Hugging Face URLs
+        echo "Downloading from Hugging Face: $url"
+        if [[ -n $HF_TOKEN ]]; then
+            huggingface-cli download --token "$HF_TOKEN" --repo-type model --cache-dir "$dir" "$url"
+        else
+            huggingface-cli download --repo-type model --cache-dir "$dir" "$url"
+        fi
+    elif [[ $url =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
+        # Use wget for CivitAI URLs
+        echo "Downloading from CivitAI: $url"
+        if [[ -n $CIVITAI_TOKEN ]]; then
+            wget --header="Authorization: Bearer $CIVITAI_TOKEN" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$dir" "$url"
+        else
+            wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$dir" "$url"
+        fi
     else
-        wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+        # Fallback to wget for other URLs
+        echo "Downloading with wget: $url"
+        wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$dir" "$url"
     fi
 }
 
