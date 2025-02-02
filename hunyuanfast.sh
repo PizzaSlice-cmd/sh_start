@@ -31,7 +31,7 @@ NODES=(
     #"https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     #"https://github.com/TinyTerra/ComfyUI_tinyterraNodes"
     #"https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
-    #"https://github.com/melMass/comfy_mtb"
+    "https://github.com/melMass/comfy_mtb"
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     #"https://github.com/theUpsider/ComfyUI-Logic"
     #"https://github.com/M1kep/ComfyLiterals"
