@@ -9,7 +9,7 @@
 #DEFAULT_WORKFLOW="https://..."
 
 APT_PACKAGES=(
-    #"blah"
+    "aria2"
     #"blah"
 )
 
@@ -291,14 +291,28 @@ function provisioning_has_valid_civitai_token() {
 function provisioning_download() {
     local url="$1"
     local dir="$2"
-    
-    # Check for Hugging Face token
-    if [[ -n $HF_TOKEN && $url =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
-        # Use huggingface-cli with hf_transfer for faster download
-        export HF_HUB_ENABLE_HF_TRANSFER=1
-        huggingface-cli download "$url" --repo-type model --local-dir "$dir" --local-dir-use-symlinks False
+    local filename=$(basename "$url")
+
+    if [[ $url =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
+        # Use aria2 for Hugging Face URLs
+        echo "Downloading from Hugging Face: $url"
+        if [[ -n $HF_TOKEN ]]; then
+            aria2c --header="Authorization: Bearer $HF_TOKEN" --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 "$url"
+        else
+            aria2c --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 "$url"
+        fi
+    elif [[ $url =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
+        # Use aria2 for CivitAI URLs
+        echo "Downloading from CivitAI: $url"
+        if [[ -n $CIVITAI_TOKEN ]]; then
+            aria2c --header="Authorization: Bearer $CIVITAI_TOKEN" --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 "$url"
+        else
+            aria2c --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 "$url"
+        fi
     else
-        echo "URL $url does not match Hugging Face pattern or no HF_TOKEN provided. Skipping download."
+        # Use aria2 for other URLs
+        echo "Downloading with aria2: $url"
+        aria2c --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 "$url"
     fi
 }
 
