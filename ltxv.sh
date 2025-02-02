@@ -14,8 +14,9 @@ APT_PACKAGES=(
 )
 
 PIP_PACKAGES=(
-    #"package-1"
-    #"package-2"
+    "huggingface_hub[hf_transfer]"
+    "HF_Transfer"
+    "sageattention"
 )
 
 NODES=(
