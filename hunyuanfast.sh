@@ -14,6 +14,7 @@ APT_PACKAGES=(
 )
 
 PIP_PACKAGES=(
+    "huggingface_hub[hf_transfer]"
     "HF_Transfer"
     "sageattention"
 )
@@ -295,9 +296,11 @@ function provisioning_download() {
         auth_token="$CIVITAI_TOKEN"
     fi
     if [[ -n $auth_token ]];then
-        aria2c -x 16 -s 16 -k 1M --header="Authorization: Bearer $auth_token" -qnc --content-disposition dotbytes="${3:-4M}" -P "$2" "$1"
+        aria2c -x 16 -s 16 -k 1M --header="Authorization: Bearer $auth_token" -q -n -c \
+        --max-download-limit="${3:-4M}" --dir="$2" "$1"
     else
-        aria2c -x 16 -s 16 -k 1M -qnc --content-disposition dotbytes="${3:-4M}" -P "$2" "$1"
+        aria2c -x 16 -s 16 -k 1M -q -n -c \
+        --max-download-limit="${3:-4M}" --dir="$2" "$1"
     fi
 }
 
