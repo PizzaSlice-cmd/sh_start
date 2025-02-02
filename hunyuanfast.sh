@@ -9,8 +9,8 @@
 #DEFAULT_WORKFLOW="https://..."
 
 APT_PACKAGES=(
-    "aria2"
-    #"sageattention"
+    #"blah"
+    #"blah"
 )
 
 PIP_PACKAGES=(
