@@ -9,13 +9,14 @@
 #DEFAULT_WORKFLOW="https://..."
 
 APT_PACKAGES=(
-    #"package-1"
-    #"package-2"
+    "aria2"
+    #"blah"
 )
 
 PIP_PACKAGES=(
-    #"package-1"
-    #"package-2"
+    "huggingface_hub[hf_transfer]"
+    "HF_Transfer"
+    "sageattention"
 )
 
 NODES=(
@@ -278,16 +279,30 @@ function provisioning_has_valid_civitai_token() {
 
 # Download from $1 URL to $2 file path
 function provisioning_download() {
-    if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
-        auth_token="$HF_TOKEN"
-    elif 
-        [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
-        auth_token="$CIVITAI_TOKEN"
-    fi
-    if [[ -n $auth_token ]];then
-        wget --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+    local url="$1"
+    local dir="$2"
+    local filename=$(basename "$url")
+
+    if [[ $url =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
+        # Use aria2 for Hugging Face URLs
+        echo "Downloading from Hugging Face: $url"
+        if [[ -n $HF_TOKEN ]]; then
+            aria2c --header="Authorization: Bearer $HF_TOKEN" --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 --console-log-level=warn --summary-interval=3 "$url"
+        else
+            aria2c --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 --console-log-level=warn --summary-interval=3 "$url"
+        fi
+    elif [[ $url =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
+        # Use aria2 for CivitAI URLs
+        echo "Downloading from CivitAI: $url"
+        if [[ -n $CIVITAI_TOKEN ]]; then
+            aria2c --header="Authorization: Bearer $CIVITAI_TOKEN" --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 --console-log-level=warn --summary-interval=3 "$url"
+        else
+            aria2c --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 --console-log-level=warn --summary-interval=3 "$url"
+        fi
     else
-        wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+        # Use aria2 for other URLs
+        echo "Downloading with aria2: $url"
+        aria2c --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 --console-log-level=warn --summary-interval=3 "$url"
     fi
 }
 
