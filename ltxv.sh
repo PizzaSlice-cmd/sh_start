@@ -17,6 +17,7 @@ PIP_PACKAGES=(
     "huggingface_hub[hf_transfer]"
     "HF_Transfer"
     "sageattention"
+    "ffmpeg nvidia-cuda-toolkit"
 )
 
 NODES=(
