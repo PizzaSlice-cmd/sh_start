@@ -296,11 +296,9 @@ function provisioning_download() {
         auth_token="$CIVITAI_TOKEN"
     fi
     if [[ -n $auth_token ]];then
-        aria2c -x 16 -s 16 -k 1M --header="Authorization: Bearer $auth_token" -q -n -c \
-        --max-download-limit="${3:-4M}" --dir="$2" "$1"
+        wget --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
     else
-        aria2c -x 16 -s 16 -k 1M -q -n -c \
-        --max-download-limit="${3:-4M}" --dir="$2" "$1"
+        wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
     fi
 }
 
