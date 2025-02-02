@@ -291,28 +291,14 @@ function provisioning_has_valid_civitai_token() {
 function provisioning_download() {
     local url="$1"
     local dir="$2"
-    local filename=$(basename "$url")
-
-    if [[ $url =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
-        # Use huggingface-cli for Hugging Face URLs
-        echo "Downloading from Hugging Face: $url"
-        if [[ -n $HF_TOKEN ]]; then
-            huggingface-cli download --token "$HF_TOKEN" --repo-type model --cache-dir "$dir" "$url"
-        else
-            huggingface-cli download --repo-type model --cache-dir "$dir" "$url"
-        fi
-    elif [[ $url =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
-        # Use wget for CivitAI URLs
-        echo "Downloading from CivitAI: $url"
-        if [[ -n $CIVITAI_TOKEN ]]; then
-            wget --header="Authorization: Bearer $CIVITAI_TOKEN" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$dir" "$url"
-        else
-            wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$dir" "$url"
-        fi
+    
+    # Check for Hugging Face token
+    if [[ -n $HF_TOKEN && $url =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
+        # Use huggingface-cli with hf_transfer for faster download
+        export HF_HUB_ENABLE_HF_TRANSFER=1
+        huggingface-cli download "$url" --repo-type model --local-dir "$dir" --local-dir-use-symlinks False
     else
-        # Fallback to wget for other URLs
-        echo "Downloading with wget: $url"
-        wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$dir" "$url"
+        echo "URL $url does not match Hugging Face pattern or no HF_TOKEN provided. Skipping download."
     fi
 }
 
