@@ -103,21 +103,21 @@ VAE_MODELS=(
     #"https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
     #"https://huggingface.co/pizzaboy29/models/resolve/main/ltx-video-v0.9-vae_finetune_all.safetensors"
     #"https://huggingface.co/calcuis/ltxv-gguf/resolve/main/ltxv-0.9.1-vae.safetensors"
-    "https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_fp32.safetensors"
-    "https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_bf16.safetensors"
+    #"https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_fp32.safetensors"
+    #"https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_bf16.safetensors"
     "https://huggingface.co/tencent/HunyuanVideo/resolve/main/hunyuan-video-t2v-720p/vae/pytorch_model.pt"
 )
 
 ESRGAN_MODELS=(
-    "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
-    "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
-    "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
+    #"https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
+    #"https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
+    #"https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
     "https://huggingface.co/pizzaboy29/models/resolve/main/FAST4xLSDIRCompactC3.pth"
-    "https://huggingface.co/pizzaboy29/models/resolve/main/FASTLESS4xNomosWebPhoto_RealPLKSR.pth"
+    #"https://huggingface.co/pizzaboy29/models/resolve/main/FASTLESS4xNomosWebPhoto_RealPLKSR.pth"
 )
 
 WORKFLOW_MODELS=(
-    "https://huggingface.co/pizzaboy29/models/resolve/main/workflow%20vast%20hunyuan.json"
+    #"https://huggingface.co/pizzaboy29/models/resolve/main/workflow%20vast%20hunyuan.json"
     #"https://huggingface.co/pizzaboy29/models/resolve/main/workflow%20LTX%20BETTER%20V2%20wan%20VAST.json"
     #"https://huggingface.co/pizzaboy29/models/resolve/main/workflow%20WAN%20Cog%20VAST.json"
     #"https://huggingface.co/pizzaboy29/models/resolve/main/workflow%20Wan%20Ruyi%20runpod.json"
