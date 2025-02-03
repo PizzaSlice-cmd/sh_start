@@ -108,8 +108,7 @@ LORA_MODELS=(
     "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuanmissionary_pov_v1.1.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuanoralv2_hunyuan_video_v2_e11_logsnr.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuanpr0neb0ne100-converted.safetensors"
-    "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuanriding_dildo_v1_hunyuan.safetensors"
-    
+    "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuanriding_dildo_v1_hunyuan.safetensors"    
 )
 
 VAE_MODELS=(
