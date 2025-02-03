@@ -10,7 +10,6 @@
 
 APT_PACKAGES=(
     "aria2"
-    "ffmpeg nvidia-cuda-toolkit"
 )
 
 PIP_PACKAGES=(
@@ -149,6 +148,8 @@ function provisioning_start() {
 
     provisioning_print_header
     provisioning_get_apt_packages
+    # Install FFmpeg with NVENC support
+    install_ffmpeg_with_nvenc
     provisioning_get_nodes
     provisioning_get_pip_packages
     provisioning_get_models \
@@ -227,6 +228,27 @@ function provisioning_get_default_workflow() {
         if [[ -n $workflow_json ]]; then
             echo "export const defaultGraph = $workflow_json;" > /opt/ComfyUI/web/scripts/defaultGraph.js
         fi
+    fi
+}
+
+function install_ffmpeg_with_nvenc() {
+    echo "Installing FFmpeg with NVENC support..."
+
+    # Add the FFmpeg PPA
+    sudo add-apt-repository ppa:jonathonf/ffmpeg-4 -y
+    sudo apt update
+
+    # Install FFmpeg
+    sudo apt install ffmpeg -y
+
+    # Verify NVENC support
+    echo "Verifying NVENC support..."
+    ffmpeg -hwaccels | grep -i "cuda\|nvenc"
+
+    if [[ $? -eq 0 ]]; then
+        echo "FFmpeg with NVENC support installed successfully."
+    else
+        echo "FFmpeg installation failed or NVENC support not detected."
     fi
 }
 
