@@ -92,13 +92,14 @@ CLIP_MODELS=(
 LORA_MODELS=(
     #"https://civitai.com/api/download/models/16576"
     "https://huggingface.co/leapfusion-image2vid-test/image2vid-960x544/resolve/main/img2vid544p.safetensors"
-    "https://civitai.com/api/download/models/1289279?type=Model&format=SafeTensor" #cms
-    "https://civitai.com/api/download/models/1321319?type=Model&format=SafeTensor" #tentareal
-    "https://civitai.com/api/download/models/1207650?type=Model&format=SafeTensor" #ahe
-    "https://civitai.com/api/download/models/1341857?type=Model&format=SafeTensor" #move enhancer
-    "https://civitai.com/api/download/models/1287585?type=Model&format=SafeTensor" #tenta
-    "https://civitai.com/api/download/models/1184768?type=Model&format=SafeTensor" #vivi
-    "https://civitai.com/api/download/models/1358539?type=Model&format=SafeTensor" #Tjerk
+    "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuan-trans-futa-solo-masturbation.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanTentacle_v4.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuan_vivi_model20.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanahegao_hunyuan_video_v1_e18.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanbouncing_breasts_hunyuan.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanmoveenhancer8itchw4lk_2_40.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanpov_cumshot_v1.1.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuantentacle-sex-f.safetensors"
     
 )
 
