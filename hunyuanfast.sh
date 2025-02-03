@@ -122,11 +122,11 @@ ESRGAN_MODELS=(
     #"https://huggingface.co/pizzaboy29/models/resolve/main/FASTLESS4xNomosWebPhoto_RealPLKSR.pth"
 )
 
-WORKFLOW_MODELS=(
-    #"https://huggingface.co/pizzaboy29/models/resolve/main/workflow%20vast%20hunyuan.json"
-    #"https://huggingface.co/pizzaboy29/models/resolve/main/workflow%20LTX%20BETTER%20V2%20wan%20VAST.json"
-    #"https://huggingface.co/pizzaboy29/models/resolve/main/workflow%20WAN%20Cog%20VAST.json"
-    #"https://huggingface.co/pizzaboy29/models/resolve/main/workflow%20Wan%20Ruyi%20runpod.json"
+LLM_MODELS=(
+    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/model-00001-of-00004.safetensors"
+    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/model-00002-of-00004.safetensors"
+    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/model-00003-of-00004.safetensors"
+    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/model-00004-of-00004.safetensors"
 )
 
 CONTROLNET_MODELS=(
@@ -190,8 +190,8 @@ function provisioning_start() {
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/user/default/workflows" \
-        "${WORKFLOW_MODELS[@]}"
+        "${WORKSPACE}/ComfyUI/models/LLM/llava-llama-3-8b-text-encoder-tokenizer" \
+        "${LLM_MODELS[@]}"
     provisioning_print_end
 }
 
