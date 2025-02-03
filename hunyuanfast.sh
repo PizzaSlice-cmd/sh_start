@@ -135,6 +135,13 @@ LLM_MODELS=(
     "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/model-00002-of-00004.safetensors"
     "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/model-00003-of-00004.safetensors"
     "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/model-00004-of-00004.safetensors"
+    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/.gitattributes"
+    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/config.json"
+    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/generation_config.json"
+    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/model.safetensors.index.json"
+    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/special_tokens_map.json"
+    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/tokenizer.json"
+    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/tokenizer_config.json"
 )
 
 CONTROLNET_MODELS=(
