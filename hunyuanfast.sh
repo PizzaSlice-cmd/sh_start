@@ -92,7 +92,9 @@ CLIP_MODELS=(
 LORA_MODELS=(
     #"https://civitai.com/api/download/models/16576"
     "https://huggingface.co/leapfusion-image2vid-test/image2vid-960x544/resolve/main/img2vid544p.safetensors"
-    "https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hyvideo_FastVideo_LoRA-fp8.safetensors"
+    "https://civitai.com/api/download/models/1289279?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/1321319?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/1207650?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(
