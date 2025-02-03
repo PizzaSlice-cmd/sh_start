@@ -322,9 +322,9 @@ function provisioning_download() {
         # Use aria2 for CivitAI URLs
         echo "Downloading from CivitAI: $url"
         if [[ -n $CIVITAI_TOKEN ]]; then
-            aria2c --header="Authorization: Bearer $CIVITAI_TOKEN" --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 --console-log-level=warn --summary-interval=3 "$url"
+            wget --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
         else
-            aria2c --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 --console-log-level=warn --summary-interval=3 "$url"
+            wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
         fi
     else
         # Use aria2 for other URLs
