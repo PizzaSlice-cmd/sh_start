@@ -332,9 +332,9 @@ function provisioning_download() {
         # Use aria2 for Hugging Face URLs
         echo "Downloading from Hugging Face: $url"
         if [[ -n $HF_TOKEN ]]; then
-            aria2c --header="Authorization: Bearer $HF_TOKEN" --dir="$dir" --out="$filename" --split=3 --max-concurrent-downloads=3 --max-connection-per-server=3 --console-log-level=warn --summary-interval=1 "$url"
+            aria2c --header="Authorization: Bearer $HF_TOKEN" --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 --console-log-level=warn --summary-interval=1 "$url"
         else
-            aria2c --dir="$dir" --out="$filename" --split=3 --max-concurrent-downloads=3 --max-connection-per-server=3 --console-log-level=warn --summary-interval=1 "$url"
+            aria2c --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 --console-log-level=warn --summary-interval=1 "$url"
         fi
     elif [[ $url =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
         # Use aria2 for CivitAI URLs
@@ -347,7 +347,7 @@ function provisioning_download() {
     else
         # Use aria2 for other URLs
         echo "Downloading with aria2: $url"
-        aria2c --dir="$dir" --out="$filename" --split=3 --max-concurrent-downloads=3 --max-connection-per-server=3 --console-log-level=warn --summary-interval=1 "$url"
+        aria2c --dir="$dir" --out="$filename" --split=16 --max-concurrent-downloads=16 --max-connection-per-server=16 --console-log-level=warn --summary-interval=1 "$url"
     fi
 }
 
