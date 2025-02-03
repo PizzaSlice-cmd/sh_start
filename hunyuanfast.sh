@@ -100,6 +100,15 @@ LORA_MODELS=(
     "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanmoveenhancer8itchw4lk_2_40.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanpov_cumshot_v1.1.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuantentacle-sex-f.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuan.bl0wj0b-4_60.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/HunyuanDoggystyleFacingCamera.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/HunyuanFacials.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuancum_on_face_v1.0.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/HunyuanSECRETSAUCEB3Hunyuan.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuanmissionary_pov_v1.1.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuanoralv2_hunyuan_video_v2_e11_logsnr.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuanpr0neb0ne100-converted.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuanriding_dildo_v1_hunyuan.safetensors"
     
 )
 
@@ -119,7 +128,7 @@ ESRGAN_MODELS=(
     #"https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
     #"https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
     "https://huggingface.co/pizzaboy29/models/resolve/main/FAST4xLSDIRCompactC3.pth"
-    #"https://huggingface.co/pizzaboy29/models/resolve/main/FASTLESS4xNomosWebPhoto_RealPLKSR.pth"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/FAST4xLSDIRCompactv2.pth"
 )
 
 LLM_MODELS=(
