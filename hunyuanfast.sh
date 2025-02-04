@@ -24,6 +24,7 @@ NODES=(
     "https://github.com/crystian/ComfyUI-Crystools"
     "https://github.com/diontimmer/ComfyUI-Vextra-Nodes"
     "https://github.com/WASasquatch/was-node-suite-comfyui"
+    "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     #"https://github.com/WASasquatch/WAS_Extras"
     #"https://github.com/lilly1987/ComfyUI_node_Lilly"
     #"https://github.com/city96/ComfyUI-GGUF"
