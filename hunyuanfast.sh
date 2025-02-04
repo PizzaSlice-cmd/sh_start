@@ -10,7 +10,6 @@
 
 APT_PACKAGES=(
     "aria2"
-    "ffmpeg nvidia-cuda-toolkit"
 )
 
 PIP_PACKAGES=(
@@ -45,7 +44,7 @@ NODES=(
     "https://github.com/Fannovel16/ComfyUI-Frame-Interpolation"
     #"https://github.com/kijai/ComfyUI-segment-anything-2"
     #"https://github.com/kijai/ComfyUI-CogVideoXWrapper"
-    #"https://github.com/kijai/ComfyUI-GIMM-VFI"
+    "https://github.com/kijai/ComfyUI-GIMM-VFI"
     "https://github.com/kijai/ComfyUI-HunyuanVideoWrapper"
     #"https://github.com/chflame163/ComfyUI_LayerStyle"
     #"https://github.com/42lux/ComfyUI-42lux"
