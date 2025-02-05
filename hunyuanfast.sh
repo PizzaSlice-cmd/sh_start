@@ -104,6 +104,7 @@ LORA_MODELS=(
     "https://huggingface.co/pizzaboy29/models/resolve/main/HunyuanDoggystyleFacingCamera.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/HunyuanFacials.safetensors"
     #"https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuancum_on_face_v1.0.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/hyvideo_FastVideo_LoRA-fp8.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/HunyuanSECRETSAUCEB3Hunyuan.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuanmissionary_pov_v1.1.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuanoralv2_hunyuan_video_v2_e11_logsnr.safetensors"
