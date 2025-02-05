@@ -27,7 +27,7 @@ NODES=(
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     #"https://github.com/WASasquatch/WAS_Extras"
     #"https://github.com/lilly1987/ComfyUI_node_Lilly"
-    #"https://github.com/city96/ComfyUI-GGUF"
+    "https://github.com/city96/ComfyUI-GGUF"
     #"https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     #"https://github.com/TinyTerra/ComfyUI_tinyterraNodes"
     #"https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
@@ -45,7 +45,7 @@ NODES=(
     "https://github.com/Fannovel16/ComfyUI-Frame-Interpolation"
     #"https://github.com/kijai/ComfyUI-segment-anything-2"
     #"https://github.com/kijai/ComfyUI-CogVideoXWrapper"
-    "https://github.com/kijai/ComfyUI-GIMM-VFI"
+    #"https://github.com/kijai/ComfyUI-GIMM-VFI"
     "https://github.com/kijai/ComfyUI-HunyuanVideoWrapper"
     #"https://github.com/chflame163/ComfyUI_LayerStyle"
     #"https://github.com/42lux/ComfyUI-42lux"
@@ -76,8 +76,9 @@ CHECKPOINT_MODELS=(
 )
 
 UNET_MODELS=(
-    "https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_FastVideo_720_fp8_e4m3fn.safetensors"
+    #"https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_FastVideo_720_fp8_e4m3fn.safetensors"
     #"https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_720_cfgdistill_fp8_e4m3fn.safetensors"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/fast-hunyuan-video-t2v-720p-Q3_K_S.gguf"
 )
 
 DIFFUSION_MODELS=(
@@ -85,7 +86,8 @@ DIFFUSION_MODELS=(
 )
 
 CLIP_MODELS=(
-    #"https://huggingface.co/pizzaboy29/models/resolve/main/t5-v1_1-xxl-encoder-Q3_K_S.gguf"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/llava-llama-3-8B-v1_1-Q3_K_S.gguf"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/clip_l.safetensors"
     #"https://huggingface.co/city96/t5-v1_1-xxl-encoder-gguf/resolve/main/t5-v1_1-xxl-encoder-Q8_0.gguf"   
 )
 
@@ -125,7 +127,7 @@ VAE_MODELS=(
     #"https://huggingface.co/calcuis/ltxv-gguf/resolve/main/ltxv-0.9.1-vae.safetensors"
     #"https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_fp32.safetensors"
     #"https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_bf16.safetensors"
-    "https://huggingface.co/tencent/HunyuanVideo/resolve/main/hunyuan-video-t2v-720p/vae/pytorch_model.pt"
+    "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanVideoSafetensors_comfyVAEFP32.safetensors"
 )
 
 ESRGAN_MODELS=(
@@ -137,17 +139,7 @@ ESRGAN_MODELS=(
 )
 
 LLM_MODELS=(
-    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/model-00001-of-00004.safetensors"
-    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/model-00002-of-00004.safetensors"
-    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/model-00003-of-00004.safetensors"
-    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/model-00004-of-00004.safetensors"
-    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/.gitattributes"
-    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/config.json"
-    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/generation_config.json"
-    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/model.safetensors.index.json"
-    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/special_tokens_map.json"
-    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/tokenizer.json"
-    "https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/tokenizer_config.json"
+    #"https://huggingface.co/Kijai/llava-llama-3-8b-text-encoder-tokenizer/resolve/main/model-00001-of-00004.safetensors"
 )
 
 CONTROLNET_MODELS=(
