@@ -95,7 +95,7 @@ LORA_MODELS=(
     "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuan-trans-futa-solo-masturbation.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanTentacle_v4.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuan_vivi_model20.safetensors"
-    "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanahegao_hunyuan_video_v1_e18.safetensors"
+    #"https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanahegao_hunyuan_video_v1_e18.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanbouncing_breasts_hunyuan.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanmoveenhancer8itchw4lk_2_40.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanpov_cumshot_v1.1.safetensors"
@@ -103,7 +103,7 @@ LORA_MODELS=(
     "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuan.bl0wj0b-4_60.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/HunyuanDoggystyleFacingCamera.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/HunyuanFacials.safetensors"
-    "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuancum_on_face_v1.0.safetensors"
+    #"https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuancum_on_face_v1.0.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/HunyuanSECRETSAUCEB3Hunyuan.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuanmissionary_pov_v1.1.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/Hunyuanoralv2_hunyuan_video_v2_e11_logsnr.safetensors"
@@ -112,6 +112,8 @@ LORA_MODELS=(
     "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanMoreDynamic_dance.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuan-futa-reverse-cowgirl.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuande3pthr0at_v1.2.safetensors"
+    "https://civitai.com/api/download/models/1099756" #bodyc
+    "https://civitai.com/api/download/models/1128720" #dress
 )
 
 VAE_MODELS=(
