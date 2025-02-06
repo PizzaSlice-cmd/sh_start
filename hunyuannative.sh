@@ -80,9 +80,9 @@ CHECKPOINT_MODELS=(
 )
 
 UNET_MODELS=(
-    "https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_FastVideo_720_fp8_e4m3fn.safetensors"
-    #"https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_720_cfgdistill_fp8_e4m3fn.safetensors"
-    "https://huggingface.co/pizzaboy29/models/resolve/main/fast-hunyuan-video-t2v-720p-Q3_K_S.gguf"
+    #"https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_FastVideo_720_fp8_e4m3fn.safetensors"
+    "https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_720_cfgdistill_fp8_e4m3fn.safetensors"
+    #"https://huggingface.co/pizzaboy29/models/resolve/main/fast-hunyuan-video-t2v-720p-Q3_K_S.gguf"
 )
 
 DIFFUSION_MODELS=(
@@ -130,7 +130,7 @@ VAE_MODELS=(
     #"https://huggingface.co/pizzaboy29/models/resolve/main/ltx-video-v0.9-vae_finetune_all.safetensors"
     #"https://huggingface.co/calcuis/ltxv-gguf/resolve/main/ltxv-0.9.1-vae.safetensors"
     #"https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_fp32.safetensors"
-    #"https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_bf16.safetensors"
+    "https://huggingface.co/Kijai/HunyuanVideo_comfy/resolve/main/hunyuan_video_vae_bf16.safetensors"
     "https://huggingface.co/pizzaboy29/models/resolve/main/hunyuanVideoSafetensors_comfyVAEFP32.safetensors"
 )
 
