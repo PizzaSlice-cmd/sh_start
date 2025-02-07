@@ -92,6 +92,7 @@ DIFFUSION_MODELS=(
 CLIP_MODELS=(
     "https://huggingface.co/pizzaboy29/models/resolve/main/llava-llama-3-8B-v1_1-Q3_K_S.gguf"
     "https://huggingface.co/pizzaboy29/models/resolve/main/clip_l.safetensors"
+    "https://huggingface.co/city96/llava-llama-3-8b-v1_1-imat-gguf/resolve/main/llava-llama-3-8B-v1_1-Q5_1.gguf"
     #"https://huggingface.co/city96/t5-v1_1-xxl-encoder-gguf/resolve/main/t5-v1_1-xxl-encoder-Q8_0.gguf"   
 )
 
