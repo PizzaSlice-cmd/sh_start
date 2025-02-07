@@ -29,6 +29,7 @@ NODES=(
     "https://github.com/wallish77/wlsh_nodes"
     "https://github.com/facok/ComfyUI-HunyuanVideoMultiLora"
     "https://github.com/logtd/ComfyUI-HunyuanLoom"
+    "https://github.com/chengzeyi/Comfy-WaveSpeed"
     #"https://github.com/WASasquatch/WAS_Extras"
     #"https://github.com/lilly1987/ComfyUI_node_Lilly"
     "https://github.com/city96/ComfyUI-GGUF"
